@@ -7,7 +7,7 @@ repositories {
 	maven { url 'https://jitpack.io' }
 }
 dependencies {
-    compileOnly "com.github.angeschossen:ChestProtectAPI:version"
+    compileOnly "com.github.Matin2:ExtraCommands:version"
 }
 ```
 
@@ -22,8 +22,8 @@ Include the API using Maven:
 
 <dependencies>
     <dependency>
-        <groupId>com.github.angeschossen</groupId>
-        <artifactId>ChestProtectAPI</artifactId>
+        <groupId>com.github.Matin2</groupId>
+        <artifactId>ExtraCommands</artifactId>
         <version>version</version>
         <scope>provided</scope>
     </dependency>
