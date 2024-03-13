@@ -1,5 +1,7 @@
-apply plugin: 'java'
-apply plugin: 'maven-publish'
+plugins {
+    id "java"
+    id "maven-publish"
+}
 
 group = 'com.github.Matin2'
 description = 'ExtraCommands'
@@ -81,9 +83,6 @@ processResources {
 publishing {
     publications {
         maven(MavenPublication) {
-            groupId project.group
-            artifactId project.description
-            version project.version
 
             from components.java
         }
