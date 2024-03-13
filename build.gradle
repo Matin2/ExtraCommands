@@ -3,6 +3,7 @@ plugins {
 }
 
 group = 'me.matin'
+description = 'ExtraCommands'
 version = '3.0'
 
 repositories {
