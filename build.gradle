@@ -1,13 +1,15 @@
-plugins {
-    id 'java'
-}
+apply plugin: 'java'
+apply plugin: 'maven-publish'
 
-group = 'me.matin'
+group = 'com.github.Matin2'
 description = 'ExtraCommands'
 version = '3.0'
 
 repositories {
     mavenCentral()
+    maven {
+        url = uri("https://hub.spigotmc.org/nexus/content/repositories/snapshots/")
+    }
     maven {
         name = "papermc-repo"
         url = "https://repo.papermc.io/repository/maven-public/"
@@ -31,6 +33,10 @@ repositories {
     maven {
         name = "Lumine Repo"
         url = "https://mvn.lumine.io/repository/maven-public/"
+    }
+    maven {
+        name = "jitpack"
+        url = "https://jitpack.io"
     }
 }
 
@@ -69,5 +75,17 @@ processResources {
     filteringCharset 'UTF-8'
     filesMatching('plugin.yml') {
         expand props
+    }
+}
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            groupId project.group
+            artifactId project.description
+            version project.version
+
+            from components.java
+        }
     }
 }
