@@ -1,0 +1,35 @@
+name: ExtraCommands
+version: '${version}'
+main: me.matin.extracommands.ExtraCommands
+api-version: '1.20'
+prefix: ExtraCommands
+description: Plugin that adds some extra commands to your server.
+softdepend:
+  - Oraxen
+  - MythicMobs
+  - ExecutableItems
+  - ProtocolLib
+commands:
+  extracommands:
+    description: The main command of ExtraCommands plugin.
+    usage: /extracommands [command]
+    aliases:
+      - extracmds
+      - ecmds
+permissions:
+  extracommands.*:
+    description: "Permission to use all of the plugin's commands."
+    default: op
+    children:
+      extracommands.drop: true
+      extracommands.modify: true
+      extracommands.attack: true
+      extracommands.block: true
+  extracommands.drop:
+    description: "Permission for the drop item command."
+  extracommands.modify:
+    description: "Permission for the modify item command."
+  extracommands.attack:
+    description: "Permission for the attack animation command."
+  extracommands.block:
+    description: "Permission for the block command."
