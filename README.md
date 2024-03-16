@@ -1,16 +1,7 @@
 [![](https://jitpack.io/v/Matin2/ExtraCommands.svg)](https://jitpack.io/#Matin2/ExtraCommands)
 
 ## API Usage Explained
-Include the API using Gradle(Groovy):
-```groovy
-repositories {
-	maven { url "https://jitpack.io" }
-}
-dependencies {
-    compileOnly "com.github.Matin2:ExtraCommands:version"
-}
-```
-Include the API using Gradle(Kotlin):
+Include the API using Gradle:
 ```kotlin
 repositories {
 	maven("https://jitpack.io")
